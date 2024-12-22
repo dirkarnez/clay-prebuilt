@@ -46,7 +46,7 @@ jobs:
           curl ${{ matrix.compiler.url }} -L --output compiler &&^
           7z.exe x compiler
           
-      - name: curl cmake-3.24.0-windows-x86_64.zip
+      - name: curl cmake
         shell: cmd
         run: curl https://github.com/Kitware/CMake/releases/download/v3.29.0/cmake-3.29.0-windows-x86_64.zip -L --output cmake-3.29.0-windows-x86_64.zip && dir && 7z.exe x cmake-3.29.0-windows-x86_64.zip
 
@@ -56,7 +56,7 @@ jobs:
       
       # - shell: cmd
       #   run: |
-      #     cd /d "${{ github.workspace }}\cmake-3.24.0-windows-x86_64\share\cmake-3.24\Modules\" &&^
+      #     cd /d "${{ github.workspace }}\cmake-3.29.0-windows-x86_64\share\cmake-3.29\Modules\" &&^
       #     del /f FindOpenSSL.cmake &&^
       #     dir
           
@@ -86,7 +86,7 @@ jobs:
       #       set PATH=^
       #       ${{ github.workspace }}\mingw64;^
       #       ${{ github.workspace }}\mingw64\bin;^
-      #       ${{ github.workspace }}\cmake-3.24.0-windows-x86_64\bin;
+      #       ${{ github.workspace }}\cmake-3.29.0-windows-x86_64\bin;
       #       set CD_LINUX=%CD:\=/%
       #       cd libsoda-cxx &&^
       #       cmake.exe -G "Visual Studio 17 2022" -A x64 ^
@@ -102,7 +102,7 @@ jobs:
             set PATH=^
             ${{ github.workspace }}\mingw64;^
             ${{ github.workspace }}\mingw64\bin;^
-            ${{ github.workspace }}\cmake-3.24.0-windows-x86_64\bin;
+            ${{ github.workspace }}\cmake-3.29.0-windows-x86_64\bin;
             set CD_LINUX=%CD:\=/%
             gcc --version &&^
             cd ${{ env.libraryName }} &&^
