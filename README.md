@@ -8,4 +8,4 @@ Prebuilt of [nicbarker/clay: High performance UI layout library in C.](https://g
 - [ ] CMake module
 
 ### Playground
-- [dirkarnez/clay-playground](https://github.com/dirkarnez/clay-playground)
+- [dirkarnez/nicbarker-clay-playground](https://github.com/dirkarnez/nicbarker-clay-playground)
